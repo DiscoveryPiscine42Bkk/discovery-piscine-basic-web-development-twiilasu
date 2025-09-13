@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="./kuta.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Mali:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Pacifico&family=Playpen+Sans+Thai:wght@100..800&display=swap"
+      rel="stylesheet"
+    />
+    <title>Rush Project Kuson</title>
+  </head>
+  <body class="bg-[#EEE]">
+    <script src="./kuta.js"></script>
+    <nav
+      class="fixed top-4 left-1/2 transform -translate-x-1/2 w-[80%] max-w-4xl z-50"
+    >
+      <div
+        class="flex flex-row bg-black/90 rounded-full justify-between items-center px-2 py-2 shadow-lg ring-1 ring-[#EEEEEE]/10"
+      >
+        <div
+          id="menu-btn"
+          class="logo w-10 h-10 bg-[#EEEEEE] rounded-full flex items-center justify-center font-bold text-black text-xl transition delay-100 duration-100 ease-in-out hover:scale-180 cursor-pointer"
+        >
+          K
+        </div>
+
+        <div
+          class="hidden md:flex flex-row space-x-6 text-[#EEEEEE] items-center"
+        >
+          <a
+            href="#Profile"
+            class="text-lg font-semibold hover:text-[#DC5F00] transition flex items-center flex-row gap-2"
+          >
+            <i class="fa fa-user text-[#EEEEEE] text-lg items-center"></i>
+            Profile
+          </a>
+          <a
+            href="#Skills"
+            class="text-lg font-semibold hover:text-[#DC5F00] transition flex items-center flex-row gap-2"
+          >
+            <i class="fa fa-book text-[#EEEEEE] text-lg items-center"></i>
+            Skills
+          </a>
+          <a
+            href="#Contact"
+            class="text-lg font-semibold hover:text-[#DC5F00] transition flex items-center flex-row gap-2"
+          >
+            <i class="fa fa-phone text-[#EEEEEE] text-lg items-center"></i>
+            Contact
+          </a>
+        </div>
+
+        <div class="flex items-center">
+          <button
+            id="hamburger-btn"
+            class="md:hidden flex items-center justify-center w-10 h-10 bg-[#CF0A0A] text-black rounded-full font-bold text-2xl transition delay-100 duration-100 ease-in-out hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-[#DC5F00]"
+            aria-label="Open menu"
+            type="button"
+          >
+            &#9776;
+          </button>
+
+          <a
+            href="https://github.com/DiscoveryPiscine42Bangkok2025/discovery-piscine-fun-with-coding-8-13-sep-2025-1XKuson"
+            target="_blank"
+            rel="noopener"
+            class="hidden md:flex items-center ml-3 bg-[#DC5F00] text-black px-3 py-2 rounded-full font-semibold transition delay-100 duration-100 ease-in-out hover:scale-180"
+            aria-label="GitHub Repository"
+          >
+            <i class="fa fa-github text-2xl mr-2"></i>
+            GitHub
+          </a>
+        </div>
+      </div>
+
+      <div
+        id="mobile-menu"
+        class="hidden md:hidden flex flex-col items-center gap-2 bg-[#000000]/95 ring-1 ring-[#EEEEEE]/10 rounded-2xl py-2 px-2 w-11 h-auto absolute right-[7px] top-[7px] z-45 backdrop-blur-sm"
+      >
+        <a
+          href="#Profile"
+          class="flex items-center gap-2 px-2 py-2 rounded-full bg-[#EEEEEE] text-black hover:bg-[#DC5F00] hover:text-black transition"
+          aria-label="Profile"
+        >
+          <i class="fa fa-user text-black text-lg items-center"></i>
+        </a>
+        <a
+          href="#Skills"
+          class="flex items-center gap-2 px-2 py-2 rounded-full bg-[#EEEEEE] text-black hover:bg-[#DC5F00] hover:text-black transition"
+          aria-label="Skills"
+        >
+          <i class="fa fa-book text-black text-lg items-center"></i>
+        </a>
+        <a
+          href="#Contact"
+          class="flex items-center gap-2 px-2 py-2 rounded-full bg-[#EEEEEE] text-black hover:bg-[#DC5F00] hover:text-black transition"
+          aria-label="Contact"
+        >
+          <i class="fa fa-phone text-black text-lg items-center"></i>
+        </a>
+        <a
+          href="https://github.com/DiscoveryPiscine42Bangkok2025/discovery-piscine-fun-with-coding-8-13-sep-2025-1XKuson"
+          class="flex items-center gap-2 px-2 py-2 rounded-full bg-[#CF0A0A] text-black hover:bg-[#DC5F00] transition"
+          aria-label="GitHub"
+        >
+          <i class="fa fa-github text-black text-lg items-center"></i>
+        </a>
+      </div>
+    </nav>
+
+    <main class="pt-24 w-full bg-[#EEE]">
+      <section
+        id="Profile"
+        class="relative min-h-screen bg-[#000000] text-[#EEEEEE] overflow-hidden"
+      >
+        <div
+          class="pointer-events-none absolute -top-28 -right-24 h-72 w-72 rounded-full blur-3xl opacity-20"
+          style="
+            background: radial-gradient(
+              60% 60% at 50% 50%,
+              #cf0a0a 0%,
+              rgba(207, 10, 10, 0) 70%
+            );
+          "
+        ></div>
+        <div
+          class="pointer-events-none absolute -bottom-24 -left-16 h-80 w-80 rounded-full blur-3xl opacity-20"
+          style="
+            background: radial-gradient(
+              60% 60% at 50% 50%,
+              #dc5f00 0%,
+              rgba(220, 95, 0, 0) 70%
+            );
+          "
+        ></div>
+
+        <div class="mx-auto max-w-7xl px-6 md:px-10 py-16 md:py-24">
+          <div class="mb-10 flex items-center gap-3">
+            <span
+              class="inline-flex items-center gap-2 rounded-full border border-white/10 bg-zinc-900/60 px-3 py-1 text-xs tracking-wide"
+            >
+              <span
+                class="h-2 w-2 rounded-full"
+                style="background: #cf0a0a; box-shadow: 0 0 12px #cf0a0a"
+              ></span>
+              AVAILABLE FOR WORK
+            </span>
+            <span class="text-xs text-zinc-400">Portfolio / Profile</span>
+          </div>
+
+          <div
+            class="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-10 items-center"
+          >
+            <div class="md:col-span-5">
+              <div
+                class="relative rounded-3xl bg-zinc-900/70 ring-1 ring-white/10 p-6 md:p-7 shadow-xl"
+              >
+                <div
+                  class="relative overflow-hidden rounded-2xl bg-zinc-800 aspect-square"
+                >
+                  <img
+                    src="https://avatars.githubusercontent.com/u/115791113?v=4"
+                    alt="Profile portrait"
+                    class="h-full w-full object-cover"
+                  />
+                  <div
+                    class="absolute left-4 top-4 rounded-full bg-[#DC5F00] text-black text-xs font-semibold px-3 py-1"
+                  >
+                    Engineer • Dev
+                  </div>
+                </div>
+                <div class="mt-5 flex items-center justify-between">
+                  <div class="text-sm text-zinc-300">Bangkok, Thailand</div>
+                  <div class="flex items-center gap-2">
+                    <a
+                      href="https://github.com/1XKuson"
+                      class="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-[#EEEEEE] text-black hover:opacity-90 transition"
+                      aria-label="GitHub"
+                    >
+                      <i class="fa fa-github"></i>
+                    </a>
+                    <a
+                      href="https://www.linkedin.com/in/kuson-ta-7913572a1/"
+                      class="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-[#EEEEEE] text-black hover:opacity-90 transition"
+                      aria-label="LinkedIn"
+                    >
+                      <i class="fa fa-linkedin"></i>
+                    </a>
+                    <button
+                      id="copyEmailBtn"
+                      class="inline-flex h-9 px-3 items-center justify-center gap-2 rounded-xl bg-zinc-800 text-[#EEEEEE] ring-1 ring-white/10 hover:bg-zinc-700 transition"
+                      type="button"
+                      aria-label="Copy email"
+                    >
+                      <i class="fa fa-envelope"></i>
+                      <span class="text-xs">Copy</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="md:col-span-7">
+              <h1
+                class="text-3xl md:text-5xl font-extrabold tracking-tight leading-tight"
+              >
+                Hi, I'm
+                <span
+                  class="bg-gradient-to-r from-[#EEEEEE] via-[#DC5F00] to-[#CF0A0A] bg-clip-text text-transparent"
+                  >Kuson Ta</span
+                >
+              </h1>
+              <p
+                class="mt-3 inline-flex items-center gap-2 rounded-full border border-white/10 bg-zinc-900/60 px-3 py-1 text-sm"
+              >
+                <span
+                  class="h-2 w-2 rounded-full"
+                  style="background: #dc5f00"
+                ></span>
+                Full‑Stack Developer • IoT Engineer
+              </p>
+              <p class="mt-6 max-w-2xl text-zinc-300">
+                Dual-degree student at KMITL with expertise in IoT, AI, and
+                full-stack development. Skilled in Python, C++, JavaScript, and
+                hardware platforms like Raspberry Pi and Arduino, creating
+                innovative tech solutions for real-world problems.
+              </p>
+
+              <div class="mt-8 grid grid-cols-2 sm:grid-cols-3 gap-4">
+                <div
+                  class="rounded-2xl bg-zinc-900/60 ring-1 ring-white/10 p-4"
+                >
+                  <div class="text-2xl font-bold">
+                    3+<span class="text-[#DC5F00]"> yrs</span>
+                  </div>
+                  <div class="text-sm text-zinc-400">Experience</div>
+                </div>
+                <div
+                  class="rounded-2xl bg-zinc-900/60 ring-1 ring-white/10 p-4"
+                >
+                  <div class="text-2xl font-bold">
+                    6+<span class="text-[#CF0A0A]"> proj</span>
+                  </div>
+                  <div class="text-sm text-zinc-400">Delivered</div>
+                </div>
+                <div
+                  class="rounded-2xl bg-zinc-900/60 ring-1 ring-white/10 p-4"
+                >
+                  <div class="text-2xl font-bold">
+                    100<span class="text-[#EEEEEE]">+</span>
+                  </div>
+                  <div class="text-sm text-zinc-400">Friends</div>
+                </div>
+              </div>
+
+              <div class="mt-10 flex flex-wrap items-center gap-3">
+                <a
+                  href="#Contact"
+                  class="inline-flex items-center gap-2 rounded-xl bg-[#DC5F00] px-5 py-3 font-semibold text-black hover:opacity-90 active:opacity-80 transition"
+                >
+                  <i class="fa fa-paper-plane"></i>
+                  Hire me
+                </a>
+                <a
+                  href="/cv.pdf"
+                  class="inline-flex items-center gap-2 rounded-xl bg-zinc-800 px-5 py-3 font-semibold text-[#EEEEEE] ring-1 ring-white/10 hover:bg-zinc-700 transition"
+                >
+                  <i class="fa fa-download"></i>
+                  Download CV
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="absolute inset-x-0 bottom-0 h-1"
+          style="background: linear-gradient(90deg, #cf0a0a, #dc5f00)"
+        ></div>
+      </section>
+
+      <section id="Skills" class="bg-[#000000] text-[#EEEEEE] py-16 mb-10">
+        <div class="mx-auto max-w-6xl px-6 md:px-8 mt-15 mb-15">
+          <h2 class="text-3xl md:text-4xl font-bold mb-12">
+            <span
+              class="bg-gradient-to-r from-[#CF0A0A] to-[#DC5F00] bg-clip-text text-transparent"
+              >Skills & Experience</span
+            >
+          </h2>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+            <div class="space-y-8">
+              <div>
+                <h3 class="text-lg font-semibold text-[#DC5F00] mb-2">
+                  Core Skills
+                </h3>
+              </div>
+
+              <div>
+                <h4 class="text-md font-semibold text-[#CF0A0A] mb-2">
+                  Programming
+                </h4>
+                <p class="text-zinc-300 text-sm">
+                  C, C++ (OOP), Python, JavaScript, HTML, CSS, SQL
+                </p>
+              </div>
+
+              <div>
+                <h4 class="text-md font-semibold text-[#CF0A0A] mb-2">
+                  Software Tools
+                </h4>
+                <p class="text-zinc-300 text-sm">
+                  Node.js, Express.js, React, MySQL, Postman, Git, Docker
+                </p>
+              </div>
+
+              <div>
+                <h4 class="text-md font-semibold text-[#CF0A0A] mb-2">
+                  Hardware Tools
+                </h4>
+                <p class="text-zinc-300 text-sm">
+                  Raspberry Pi, Arduino Board, ESP32, Integrated Circuit (IC)
+                </p>
+              </div>
+
+              <div>
+                <h4 class="text-md font-semibold text-[#CF0A0A] mb-2">
+                  Soft Skills
+                </h4>
+                <p class="text-zinc-300 text-sm">
+                  Teamwork, Critical Thinking, Communication, Problem Solving,
+                  Time Management, Adaptability, Leadership
+                </p>
+              </div>
+            </div>
+
+            <div class="space-y-6">
+              <h3 class="text-lg font-semibold text-[#DC5F00] mb-4">
+                Projects & Experience
+              </h3>
+
+              <div>
+                <h4 class="font-semibold">
+                  Durian Leaf Classifier with LINE Chatbot | 2024
+                </h4>
+                <p class="text-zinc-400 text-sm">
+                  AI system for leaf disease classification with deep learning
+                  on AWS EC2, LINE chatbot integration, Express.js & Flask APIs,
+                  PostgreSQL.
+                </p>
+              </div>
+
+              <div>
+                <h4 class="font-semibold">
+                  BKK BIN+ e-Waste Hackathon (2nd Runner Up) | 2024
+                </h4>
+                <p class="text-zinc-400 text-sm">
+                  AI waste management with IoT sensors, Node.js API, PostgreSQL,
+                  LINE APIs for user points, coupons, and bin locations.
+                </p>
+              </div>
+
+              <div>
+                <h4 class="font-semibold">ProfessorDB Web App | 2024</h4>
+                <p class="text-zinc-400 text-sm">
+                  CRUD app with React & Express.js, SQL backend, REST API,
+                  features for auto CV generation and electronic name cards.
+                </p>
+              </div>
+
+              <div>
+                <h4 class="font-semibold">Unicon Tracking & Analyze | 2023</h4>
+                <p class="text-zinc-400 text-sm">
+                  ESP32 bus tracker with AWS EC2, InfluxDB, Grafana, OpenCV &
+                  Ultralytics for passenger counting, real-time speed and
+                  location tracking.
+                </p>
+              </div>
+
+              <div>
+                <h4 class="font-semibold">QR Durian IoT Web App | 2022</h4>
+                <p class="text-zinc-400 text-sm">
+                  Web app with QR code generation and IoT data collection (HTML,
+                  CSS, JS, PHP, SQL) for temperature, humidity, and rainfall
+                  metrics.
+                </p>
+              </div>
+
+              <div>
+                <h4 class="font-semibold">
+                  Orange Size Measuring Instrument | 2022
+                </h4>
+                <p class="text-zinc-400 text-sm">
+                  IoT device with ESP32 & Arduino Uno for orange size
+                  measurement; circuit design and sensor integration experience.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="min-h-screen bg-[#EEE] flex flex-col items-center justify-center"
+        id="Contact"
+      >
+        <div
+          class="max-w-[80%] md:max-w-[70%] w-full bg-black rounded-3xl overflow-hidden shadow-xl"
+        >
+          <div
+            class="w-full px-6 md:px-10 py-6 flex items-center justify-between border-b border-white/10"
+          >
+            <h2
+              class="text-2xl md:text-3xl font-bold text-white tracking-tight"
+            >
+              Contact
+            </h2>
+            <span class="inline-flex items-center gap-2 text-sm text-[#EEE]/80">
+              <span
+                class="w-2.5 h-2.5 rounded-full bg-[#CF0A0A] shadow-[0_0_8px]"
+              ></span>
+              Open to opportunities
+            </span>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-0">
+            <aside class="p-6 md:p-10 bg-zinc-900">
+              <ul class="space-y-4">
+                <li class="group">
+                  <a
+                    href="mailto:kusonta.dev@gmail.com"
+                    class="flex items-center gap-4 p-4 rounded-2xl bg-zinc-800/70 hover:bg-zinc-800 transition ring-1 ring-white/5"
+                  >
+                    <div
+                      class="w-11 h-11 rounded-xl flex items-center justify-center bg-[#CF0A0A] text-white text-xl"
+                    >
+                      <i class="fa fa-envelope"></i>
+                    </div>
+                    <div class="flex-1">
+                      <p class="text-[#EEE] font-semibold leading-tight">
+                        Email
+                      </p>
+                      <p class="text-sm text-zinc-300">kusonta.dev@gmail.com</p>
+                    </div>
+                    <i
+                      class="fa fa-angle-right text-zinc-400 group-hover:text-[#DC5F00]"
+                    ></i>
+                  </a>
+                </li>
+
+                <li class="group">
+                  <a
+                    href="https://github.com/1XKuson"
+                    target="_blank"
+                    rel="noopener"
+                    class="flex items-center gap-4 p-4 rounded-2xl bg-zinc-800/70 hover:bg-zinc-800 transition ring-1 ring-white/5"
+                  >
+                    <div
+                      class="w-11 h-11 rounded-xl flex items-center justify-center bg-[#DC5F00] text-black text-xl"
+                    >
+                      <i class="fa fa-github"></i>
+                    </div>
+                    <div class="flex-1">
+                      <p class="text-[#EEE] font-semibold leading-tight">
+                        GitHub
+                      </p>
+                      <p class="text-sm text-zinc-300">1XKuson</p>
+                    </div>
+                    <i
+                      class="fa fa-angle-right text-zinc-400 group-hover:text-[#CF0A0A]"
+                    ></i>
+                  </a>
+                </li>
+
+                <li class="group">
+                  <a
+                    href="https://www.linkedin.com/in/kuson-ta-7913572a1/"
+                    target="_blank"
+                    rel="noopener"
+                    class="flex items-center gap-4 p-4 rounded-2xl bg-zinc-800/70 hover:bg-zinc-800 transition ring-1 ring-white/5"
+                  >
+                    <div
+                      class="w-11 h-11 rounded-xl flex items-center justify-center bg-[#EEE] text-black text-xl"
+                    >
+                      <i class="fa fa-linkedin-square"></i>
+                    </div>
+                    <div class="flex-1">
+                      <p class="text-[#EEE] font-semibold leading-tight">
+                        LinkedIn
+                      </p>
+                      <p class="text-sm text-zinc-300">/in/kuson-ta</p>
+                    </div>
+                    <i
+                      class="fa fa-angle-right text-zinc-400 group-hover:text-[#DC5F00]"
+                    ></i>
+                  </a>
+                </li>
+
+                <li class="p-4 rounded-2xl bg-zinc-800/50 ring-1 ring-white/5">
+                  <p class="text-[#EEE] font-semibold">Location</p>
+                  <p class="text-sm text-zinc-300">
+                    Bangkok, Thailand (ICT, UTC+7)
+                  </p>
+                </li>
+              </ul>
+
+              <p class="mt-8 text-xs text-zinc-400">
+                Prefer email for quickest response. I usually reply within a
+                day.
+              </p>
+            </aside>
+
+            <div class="p-6 md:p-10 bg-black">
+              <form id="contactForm" class="space-y-5">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div>
+                    <label
+                      for="name"
+                      class="block text-sm font-medium text-[#EEE] mb-2"
+                      >Your name</label
+                    >
+                    <input
+                      id="name"
+                      name="name"
+                      type="text"
+                      required
+                      class="w-full rounded-xl bg-[#EEE] text-black placeholder-black/50 px-4 py-3 outline-none ring-2 ring-transparent focus:ring-[#DC5F00] transition"
+                      placeholder="Jane Doe"
+                    />
+                  </div>
+                  <div>
+                    <label
+                      for="email"
+                      class="block text-sm font-medium text-[#EEE] mb-2"
+                      >Email</label
+                    >
+                    <input
+                      id="email"
+                      name="email"
+                      type="email"
+                      required
+                      class="w-full rounded-xl bg-[#EEE] text-black placeholder-black/50 px-4 py-3 outline-none ring-2 ring-transparent focus:ring-[#DC5F00] transition"
+                      placeholder="jane@email.com"
+                    />
+                  </div>
+                </div>
+
+                <div>
+                  <label
+                    for="subject"
+                    class="block text-sm font-medium text-[#EEE] mb-2"
+                    >Subject</label
+                  >
+                  <input
+                    id="subject"
+                    name="subject"
+                    type="text"
+                    required
+                    class="w-full rounded-xl bg-[#EEE] text-black placeholder-black/50 px-4 py-3 outline-none ring-2 ring-transparent focus:ring-[#CF0A0A] transition"
+                    placeholder="Let's collaborate"
+                  />
+                </div>
+
+                <div>
+                  <label
+                    for="message"
+                    class="block text-sm font-medium text-[#EEE] mb-2"
+                    >Message</label
+                  >
+                  <textarea
+                    id="message"
+                    name="message"
+                    rows="6"
+                    required
+                    class="w-full rounded-xl bg-[#EEE] text-black placeholder-black/50 px-4 py-3 outline-none ring-2 ring-transparent focus:ring-[#CF0A0A] transition"
+                    placeholder="Tell me about your project or idea…"
+                  ></textarea>
+                </div>
+
+                <div class="flex items-center gap-3">
+                  <button
+                    type="submit"
+                    class="inline-flex items-center gap-2 px-5 py-3 rounded-xl font-semibold text-black bg-[#DC5F00] hover:opacity-90 active:opacity-80 transition"
+                  >
+                    <i class="fa fa-paper-plane"></i> Send message
+                  </button>
+
+                  <button
+                    type="reset"
+                    class="px-5 py-3 rounded-xl font-semibold bg-zinc-800 text-[#EEE] hover:bg-zinc-700 transition"
+                  >
+                    Reset
+                  </button>
+                </div>
+
+                <p id="formToast" class="hidden mt-3 text-sm"></p>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script>
+      // Mobile menu toggle
+      const menuBtn = document.getElementById("menu-btn");
+      const hamburgerBtn = document.getElementById("hamburger-btn");
+      const mobileMenu = document.getElementById("mobile-menu");
+
+      // Toggle with hamburger button
+      hamburgerBtn.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+      });
+
+      // Optional: toggle with logo
+      menuBtn.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+      });
+
+      // Close mobile menu when a link is clicked
+      mobileMenu.querySelectorAll("a,button").forEach((el) => {
+        el.addEventListener("click", () => {
+          mobileMenu.classList.add("hidden");
+        });
+      });
+
+      // Close mobile menu when clicking outside
+      document.addEventListener("click", (event) => {
+        const isMenuOpen = !mobileMenu.classList.contains("hidden");
+        if (
+          isMenuOpen &&
+          !mobileMenu.contains(event.target) &&
+          !hamburgerBtn.contains(event.target) &&
+          !menuBtn.contains(event.target)
+        ) {
+          mobileMenu.classList.add("hidden");
+        }
+      });
+    </script>
+  </body>
+</html>
